@@ -9,131 +9,150 @@
     <script src="./script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class="header">
+        <div class="top">
             <div class="headerSearch">
-                <div class="searchIcon"></div>
-                <div class="searchBar">
-                    <input type="search" name="" id="" class="">
-                </div>
+                <img src="./icons-and-images/magnify.svg" alt="Search">
+                <input type="text" name="search" id="" class="">
             </div>
             <div class="profileInfo">
-                <div class="profileAlerts">Alerts</div>
-                <div class="profilePhoto">Photo</div>
+                <div class="profileAlerts">
+                    <img src="./icons-and-images/bell-ring.svg" alt="Alerts">
+                </div>
+                <div class="profileAvatar">
+                    <img src="https://www.github.com/BradMJ.png" alt="Avatar">
+                </div>
                 <div class="profileName">
-                    <h5>Profile Name</h5>
+                    <p>Admin Profile</p>
                 </div>
             </div>
+        </div>
+        <div class="bottom">
             <div class="profileGreeting">
-                <div class="profileGreetingPhoto">Photo</div>
-                <div class="profileHello">
-                    <h6>Hello there,</h6>
+                <div class="gh-avatar">
+                    <img src="https://www.github.com/BradMJ.png" alt="Avatar">
                 </div>
-                <div class="profileHelloName">
-                    <h3>Profile Name (@profileName)</h3>
-                </div>
-            </div>
-            <div class="profileActions">
-                <div class="newPost">New</div>
-                <div class="newUpload">Upload</div>
-                <div class="newShare">Share</div>
-            </div>
-        </div>
-        <div class="sidebar">
-            <div class="dashboard">
-                <div class="logo">
-                    <h2>*Dashboard</h2>
+                <div class="profile-name">
+                    <p class="greeting">Hello there,</p>
+                    <p class="name">Admin Profile <span class="username">(@adminProfile)</span></p>
                 </div>
             </div>
-            <div class="directory">
-                <div class="home">Home</div>
-                <div class="profile">Profile</div>
-                <div class="messages">Messages</div>
-                <div class="history">History</div>
-                <div class="tasks">Tasks</div>
-                <div class="communities">Communities</div>
-            </div>
-            <div class="controls">
-                <div class="settings">Settings</div>
-                <div class="support">Support</div>
-                <div class="privacy">Privacy</div>
+            <div class="buttons">
+                <button class="newPost">New</button>
+                <button class="newUpload">Upload</button>
+                <button class="newShare">Share</button>
             </div>
         </div>
-        <div class="content">
-            <div class="projects">
-                <div class="projectsCard">
-                    <div class="projectInfo">
-                        <h6>Project 1</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                    <div class="projectCommands">
+    </div>
+    <div class="sidebar">
+        <div class="dashboard sidebar-item">
+            <img src="./icons-and-images/view-dashboard.svg" alt="Dashboard">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="directory">
+            <div class="home sidebar-item">
+                <img src="./icons-and-images/home.svg" alt="Home">
+                <p class="sidebar-text">Home</p>
+            </div>
+            <div class="profile sidebar-item">
+                <img src="./icons-and-images/account-box.svg" alt="Profile">
+                <p class="sidebar-text">Profile</p>
+            </div>
+            <div class="messages sidebar-item">
+                <img src="./icons-and-images/message-settings.svg" alt="Messages">
+                <p class="sidebar-text">History</p>
+            </div>
+            <div class="history sidebar-item">
+                <img src="./icons-and-images/clock.svg" alt="History">
+                <p class="sidebar-text">History</p>
+            </div>
+            <div class="tasks sidebar-item">
+                <img src="./icons-and-images/format-list-checkbox.svg" alt="Tasks">
+                <p class="sidebar-text">Tasks</p>
+            </div>
+            <div class="communities sidebar-item">
+                <img src="./icons-and-images/crowd.svg" alt="Communities">
+                <p class="sidebar-text">Communities</p>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="settings sidebar-item">
+                <img src="./icons-and-images/cog.svg" alt="Settings">
+                <p class="sidebar-text">Settings</p>
+            </div>
+            <div class="support sidebar-item">
+                <img src="./icons-and-images/bell-ring.svg" alt="Support">
+                <p class="sidebar-text">Support</p>
+            </div>
+            <div class="privacy sidebar-item">
+                <img src="./icons-and-images/shield-check.svg" alt="Privacy">
+                <p class="sidebar-text">Privacy</p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="projects">
+            <h3>Your Projects</h3>
+            <div class="projectCards">
+                <div class="projectCard">
+                    <h6 class="card-title">Project 1</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div class="card-actions">
                         Favorite Look Share
                     </div>
                 </div>
-                <div class="projectsCard">
-                    <div class="projectInfo">
-                        <h6>Project 2</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                    <div class="projectCommands">
+                <div class="projectCard">
+                    <h6 class="card-title">Project 2</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div class="card-actions">
                         Favorite Look Share
                     </div>
                 </div>
-                <div class="projectsCard">
-                    <div class="projectInfo">
-                        <h6>Project 3</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                    <div class="projectCommands">
+                <div class="projectCard">
+                    <h6 class="card-title">Project 3</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div class="card-actions">
                         Favorite Look Share
                     </div>
                 </div>
-                <div class="projectsCard">
-                    <div class="projectInfo">
-                        <h6>Project 4</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                    <div class="projectCommands">
+                <div class="projectCard">
+                    <h6 class="card-title">Project 4</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div class="card-actions">
                         Favorite Look Share
                     </div>
                 </div>
-                <div class="projectsCard">
-                    <div class="projectInfo">
-                        <h6>Project 5</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                    <div class="projectCommands">
+                <div class="projectCard">
+                    <h6 class="card-title">Project 5</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div class="card-actions">
                         Favorite Look Share
                     </div>
                 </div>
-                <div class="projectsCard">
-                    <div class="projectInfo">
-                        <h6>Project 6</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                    <div class="projectCommands">
+                <div class="projectCard">
+                    <h6 class="card-title">Project 6</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div class="card-actions">
                         Favorite Look Share
                     </div>
                 </div>
             </div>
-            <div class="sideContent">
-                <div class="announcements">
-                    Announcements
-                    <div class="announcementCards">
-                        <div class="sideCard">Card One</div>
-                        <div class="sideCard">Card Two</div>
-                        <div class="sideCard">Card Three</div>
-                    </div>
-                </div>
-                <div class="trending">
-                    Trending
-                    <div class="trendingCards">
-                        <div class="sideCard">Card One</div>
-                        <div class="sideCard">Card Two</div>
-                        <div class="sideCard">Card Three</div>
-                        <div class="sideCard">Card Four</div>
-                    </div>
-                </div>
+        </div>
+        <div class="announcements">
+            <h3>Announcements</h3>
+            <div class="announcementCards">
+                <div class="sideCard">Card One</div>
+                <div class="sideCard">Card Two</div>
+                <div class="sideCard">Card Three</div>
+            </div>
+        </div>
+        <div class="trending">
+            <h3>Trending</h3>
+            <div class="trendingCards">
+                <div class="sideCard">Card One</div>
+                <div class="sideCard">Card Two</div>
+                <div class="sideCard">Card Three</div>
+                <div class="sideCard">Card Four</div>
             </div>
         </div>
     </div>
