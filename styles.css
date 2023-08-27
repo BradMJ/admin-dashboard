@@ -46,7 +46,7 @@ body img {
     height: 40px;
     width: 40px;
     color: white;
-    border-radius: 50%;
+    border-radius: 50%;cursor: pointer;
 }
 
 .header {
@@ -59,7 +59,7 @@ body img {
 .top {
     display: grid;
     grid-template-columns: 1fr max-content;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.25rem;
 }
 
 .top > .headerSearch {
@@ -68,10 +68,24 @@ body img {
     align-items: center;
 }
 
+.headerSearch > input {
+    display: inline-block;
+    width: min(80%, 700px);
+    border: 0;
+    border-radius: 99em;
+    background-color: rgb(240, 240, 240);
+    padding: 0.75em 1.5em;
+    outline-color: cornflowerblue;
+    margin-left: 1.25rem;
+}
+
 .top > .profileInfo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: 800;
 }
 
 .bottom {
@@ -82,10 +96,42 @@ body img {
 
 .bottom > .profileGreeting {
     display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bottom > .profileGreeting .greeting {
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+
+.bottom > .profileGreeting .name {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.bottom > .profileGreeting .name span {
+    font-style: italic;
+}
+
+.bottom > .profileGreeting img {
+    height: 75px;
+    width: 75px;
 }
 
 .bottom > .buttons {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.bottom > .buttons button {
+    padding: 1rem 3rem;
+    background-color: cornflowerblue;
+    border-radius: 25px;
+    color: white;
+    font-weight: 800;
 }
 
 .sidebar {
@@ -100,19 +146,32 @@ body img {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1rem;
+    align-items: center;
+}
+
+.sidebar-text {
+    cursor: pointer;
+}
+
+.directory {
+    padding: 2rem 0;
 }
 
 .directory > .sidebar-item {
     font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
 }
 
 .controls > .sidebar-item {
     font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
 }
 
 .content {
     grid-area: 2 / 2 / 3 / 3;
-    background-color: lightgray;
+    background-color: rgb(240, 240, 240);
     display: grid;
     grid-template-columns: 3fr 0.8fr;
     grid-template-rows: min-content 1fr;
@@ -126,10 +185,6 @@ body img {
     margin-bottom: 0.8rem;
 }
 
-.content > div {
-
-}
-
 .projects {
     grid-area: 1 / 1 / 3 / 2;
 }
@@ -137,7 +192,7 @@ body img {
 .projects > .projectCards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-auto-rows: 250px;
+    grid-auto-rows: 240px;
     justify-content: center;
     gap: 2rem;
     padding-bottom: 1rem;
@@ -150,14 +205,32 @@ body img {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-.projectCard > div {
-
+.projectCard > .card-title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
 }
 
-.sideContent {
+.projectCard > .card-text {
+    color: rgb(150, 150, 150);
+    font-size: 0.9rem;
+    overflow: hidden;
+}
 
+.card-actions {
+    margin-top: auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.card-actions > img {
+    height: 30px;
+    width: 30px;
 }
 
 .announcements {
@@ -167,6 +240,40 @@ body img {
 
 .announcementCards {
     background-color: white;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.announcement {
+    width: 25ch;
+    padding: 1rem 0;
+}
+
+.announcement:first-child {
+    padding-top: 0;
+}
+
+.announcement:last-child {
+    padding-bottom: 0;
+}
+
+.announcement .card-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.announcement + .announcement {
+    border-top: 1px solid #e7e5e4;
+}
+
+.announcement .card-text {
+    color: rgb(150, 150, 150);
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .trending {
@@ -176,8 +283,31 @@ body img {
 
 .trendingCards {
     background-color: white;
+    margin: 0;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
-.sideCard {
+.trendingCards > .trend {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 5px;
+    cursor: pointer;
+}
 
+.trend .username {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.trend .card-text {
+    color: rgb(150, 150, 150);
+}
+
+.trend + .trend {
+    margin-top: 1rem;
 }
